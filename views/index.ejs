@@ -8,13 +8,37 @@
             <div class="flex text-center justify-center w-3/4 ">
                 <p class="text-slate-500">There are no clients yet, press the ADD icon to add a Client.</p>
             </div>
-            
+            <div id="add-form" class="absolute bg-white text-slate-700 p-4 rounded-lg hidden">
+                <form class="" action="/add-client" method="post">
+                    <p class=" flex text-2xl justify-center font-bold pb-2">CLIENT DETAILS</p>
+                    <label class="px-3 text-xl" for="name">Name</label><br>
+                    <input class="rounded-xl p-1 px-3 text-xl border-2 border-slate-400 text-black" type="text"
+                        name="name" id="name"><br>
+                    <label class="mt-2 px-3 text-xl" for="mobileNumber">Mobile Number</label><br>
+                    <input class="rounded-xl p-1 px-3 text-xl border-2 border-slate-400 text-black" type="tel"
+                        name="mobileNumber" id="mobileNumber"><br>
+                    <label class="mt-2 px-3 text-xl" for="adhaarNumber">Adhaar No</label><br>
+                    <input class="rounded-xl p-1 px-3 text-xl border-2 border-slate-400 text-black" class="mb-4"
+                        type="tel" name="adhaarNumber" id="adhaarNumber"><br>
+                    <div class="flex flex-col">
+                        <input class="m-3" type="file" name="Adhaar Card" id="">
+                        <input class="mb-3 mx-3" type="file" name="Photo" id="">
+                    </div>
+                    <div class="w-full flex justify-center mt-4">
+                        <button class=" rounded-lg font-semibold bg-slate-700 text-white text-xl p-3 flex justify-center"
+                            type="submit">ADD CLIENT</button>
+                    </div>
+
+                </form>
+            </div>
         </div>
     </div>
-    <div class="absolute bottom-0 left-1/2 -translate-x-1/2">
-        <button class="text-custom-red font-semibold border-custom-red py-2 px-4 border-2 rounded-lg hover:bg-custom-red hover:text-white">
+    <div id="add-button" class="absolute bottom-0 left-1/2 -translate-x-1/2">
+        <button
+            class="text-custom-red font-semibold border-custom-red py-2 px-4 border-2 rounded-lg hover:bg-custom-red hover:text-white">
             ADD
         </button>
     </div>
 
-<%- include('partials/footer.ejs') %>
+
+    <%- include('partials/footer.ejs') %>

@@ -13,6 +13,11 @@ app.get("/", (req,res)=> {
     res.render("index.ejs")
 });
 
+app.post("/add-client",(req,res) => {
+    console.log(req.body);
+    res.render("index.ejs")
+})
+
 
 
 
